@@ -4,6 +4,16 @@ This repository contains some XSL example to parse the ICD-10 tabular.xml versio
 
 Catalog syncrhonizing or specific data extraction of a XML using XSL, with or without templates, can help the organizations to reduce IT maintenance time.
 
+To use the templates you need to download the ICD-10 XML. Maybe from the CDC site:
+http://www.cdc.gov/nchs/icd/icd10cm.htm
+
+or the ftp site: 
+
+ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2017/
+
+To apply the xsl to the xml you can use any xml processor available in the market.
+
+### Reference
 World Health Organization ICD - 10 http://www.who.int/classifications/icd/en/
 
 

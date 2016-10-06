@@ -3,6 +3,8 @@
 
 Obtained from:
 
+http://keith-wood.name/DelphiXML/index.html
+
 http://keith-wood.name/delphixml/BookCode/Chapter%2020/index.html
 
 

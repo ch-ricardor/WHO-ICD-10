@@ -1,0 +1,80 @@
+<!-- Data about movies and when and where they are showing
+     Developed by Keith Wood, 28 May 1999 -->
+<!ELEMENT movie-watcher (movies, cinemas, screenings)>
+
+<!ELEMENT movies (movie+)>
+
+  <!-- Information about the movies -->
+  <!ELEMENT movie 
+    (name, length?, director?, starring?, synopsis?)>
+  <!ATTLIST movie id ID #REQUIRED
+                  rating (NR | G | PG | PG-13 | R) #REQUIRED
+                  logo-url ENTITY #IMPLIED
+                  url ENTITY #IMPLIED>
+
+    <!ELEMENT name (#PCDATA)>
+    <!-- Length as minutes -->
+    <!ELEMENT length (#PCDATA)>
+    <!ELEMENT director (#PCDATA)>
+    <!ELEMENT starring (star+)>
+      <!ELEMENT star (#PCDATA)>
+    <!ELEMENT synopsis (#PCDATA | emph)*>
+      <!ELEMENT emph (#PCDATA)>
+
+<!ELEMENT cinemas (cinema+)>
+
+  <!-- Details about the cinemas -->
+  <!ELEMENT cinema 
+    (name, phone, address, directions?, facilities?, pricing)>
+  <!ATTLIST cinema id ID #REQUIRED
+                   logo-url ENTITY #IMPLIED
+                   url ENTITY #IMPLIED>
+
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT directions (#PCDATA)>
+
+    <!ELEMENT facilities (candy-bar?, disabled-access?)>
+
+      <!ELEMENT candy-bar EMPTY>
+      <!ELEMENT disabled-access EMPTY>
+
+    <!-- List of pricing schemes -->
+    <!ELEMENT pricing (prices+)>
+
+      <!ELEMENT prices (name, period, adult, child, discount?)>
+      <!ATTLIST prices id ID #REQUIRED>
+
+        <!-- When do these prices apply? -->
+        <!ELEMENT period (#PCDATA)>
+        <!-- Actual prices in dollars -->
+        <!ELEMENT adult (#PCDATA)>
+        <!ELEMENT child (#PCDATA)>
+        <!ELEMENT discount (#PCDATA)>
+
+<!ELEMENT screenings (screening+)>
+
+  <!-- Where and when is a movie showing? -->
+  <!ELEMENT screening
+    (start-date, end-date, features?, restrictions?, sessions)>
+  <!-- Which movie and cinema? -->
+  <!ATTLIST screening movie-id IDREF #REQUIRED
+                      cinema-id IDREF #REQUIRED>
+
+    <!-- Which dates does this apply to? (format mm/dd/yyyy) -->
+    <!ELEMENT start-date (#PCDATA)>
+    <!ELEMENT end-date (#PCDATA)>
+
+    <!ELEMENT features (digital-sound?)>
+
+      <!ELEMENT digital-sound (#PCDATA)>
+
+    <!ELEMENT restrictions (no-passes?)>
+
+      <!ELEMENT no-passes EMPTY>
+
+    <!ELEMENT sessions (session+)>
+      <!-- Session value is the start time hh:mmam/pm -->
+      <!ELEMENT session (#PCDATA)>
+      <!-- Which price schedule to use? -->
+      <!ATTLIST session price-id IDREF #REQUIRED>

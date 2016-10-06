@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE movie-watcher SYSTEM "movie-watcher.dtd" [
+  <!NOTATION HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+  <!NOTATION JPEG SYSTEM "iview.exe">
+  <!ENTITY SW2-site SYSTEM "http://www.starwars.com/episode-ii/" NDATA HTML>
+  <!ENTITY SW2-logo SYSTEM
+    "http://images.amazon.com/images/P/B00003CXKT.01.MZZZZZZZ.jpg" NDATA JPEG>
+  <!ENTITY PV "Pleasantville">
+]>
+<!-- Sample XML document with data about movies
+     and when and where they are showing
+     Developed by Keith Wood, 28 May 2002 -->
+<?xml-stylesheet type="text/xsl" href="movie-watcher-tmplt.xsl"?>
+<movie-watcher>
+  <movies>
+    <movie id="LR1" rating="PG-13">
+      <name>The Fellowship of the Ring</name>
+      <length>178</length>
+      <director>Peter Jackson</director>
+      <starring>
+        <star>Elijah Wood</star>
+        <star>Ian McKellen</star>
+        <star>Viggo Mortensen</star>
+        <star>Liv Tyler</star>
+      </starring>
+      <synopsis><![CDATA[An ancient Ring thought lost for centuries has been found, and 
+        through a strange twist in fate has been given to a small Hobbit named 
+        Frodo. When Gandalf discovers the Ring is in fact the One Ring of the 
+        Dark Lord Sauron, Frodo must make an epic quest to the Cracks 
+        of Doom in order to destroy it! However he does not go alone. He is 
+        joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir 
+        and his three Hobbit friends Merry, Pippin and Samwise. Through mountains, 
+        snow, darkness, forests, rivers and plains, facing evil and danger at 
+        every corner the Fellowship of the Ring must go. Their quest to destroy 
+        the One Ring is the only hope for the end of the Dark Lords reign!]]>
+      </synopsis>
+    </movie>
+    <movie id="SW2" rating="PG" logo-url="SW2-logo" url="SW2-site">
+      <name>Star Wars - Attack of the Clones</name>
+      <length>143</length>
+      <director>George Lucas</director>
+      <starring>
+        <star>Ewan McGregor</star>
+        <star>Natalie Portman</star>
+        <star>Hayden Christensen</star>
+        <star>Christopher Lee</star>
+      </starring>
+      <synopsis>Jedi Knights Obi-Wan Kenobi and Anakin Skywalker discover there 
+        is more than meets the eye behind an assassination attempt on Naboo 
+        Senator Padm&#xe9; Amidala&apos;s life. Meanwhile, a Sith Lord orchestrates events 
+        between the forces of good and evil, all the while waiting to play the 
+        final move that will ensure him control of the galaxy. 
+      </synopsis>
+    </movie>
+    <movie id="ABM" rating="PG-13">
+      <name>A Beautiful Mind</name>
+      <length>136</length>
+      <director>Ron Howard</director>
+      <starring>
+        <star>Russell Crowe</star>
+        <star>Jennifer Connelly</star>
+        <star>Ed Harris</star>
+        <star>Christopher Plummer</star>
+      </starring>
+      <synopsis>A biopic of the meteoric rise of John Forbes Nash Jr., a math 
+        prodigy able to solve problems that baffled the greatest of minds. And how 
+        he overcame years of suffering through schizophrenia to win the Nobel Prize. 
+      </synopsis>
+    </movie>
+    <movie id="MIN" rating="PG-13">
+      <name>Minority Report</name>
+      <length>145</length>
+      <director>Steven Spielberg</director>
+      <starring>
+        <star>Tom Cruise</star>
+        <star>Colin Farrell</star>
+        <star>Samantha Morton</star>
+      </starring>
+      <synopsis>Based on a Philip K. Dick short story, Minority Report is about 
+        a cop in the future working in a division of the police department that 
+        arrests killers before they commit the crimes courtesy of some future 
+        viewing technology. Cruise's character has the tables turned on him 
+        when he is accused of a future crime and must find out what brought 
+        it about and stop it before it can happen 
+      </synopsis>
+    </movie>
+    <movie id="JN" rating="G">
+      <name>Jimmy Neutron: Boy Genius</name>
+      <length>82</length>
+      <director>John A. Davis</director>
+      <starring>
+        <star>Debi Derryberry</star>
+        <star>Jeffrey Garcia</star>
+      </starring>
+      <synopsis>Jimmy Neutron is a boy genius and way ahead of his friends, but
+        when it comes to being cool, he's a little behind. All until one day  when
+        his parents, and parents all over Earth are kidnapped by aliens, it's up 
+        to him to lead all the children of the world to rescue their parents. 
+      </synopsis>
+    </movie>
+    <movie id="MEM" rating="R">
+      <name>Memento</name>
+      <length>113</length>
+      <director>Christopher Nolan</director>
+      <starring>
+        <star>Guy Pearce</star>
+        <star>Carrie-Anne Moss</star>
+        <star>Joe Pantoliano</star>
+      </starring>
+      <synopsis>Point blank in the head a man shoots another. In flashbacks, 
+        each one earlier in time than what we've just seen, the two men's 
+        past unfolds. Leonard, as a result of a blow to the head during 
+        an assault on his wife, has no short-term memory. He's looking for 
+        his wife's killer, compensating for his disability by taking Polaroids, 
+        annotating them, and tattooing important facts on his body. We meet 
+        the loquacious Teddy and the seductive Natalie (a barmaid who promises 
+        to help), and we glimpse Leonard's wife through memories from before 
+        the assault. Leonard also talks about Sammy Jankis, a man he knew with a
+        similar condition. Has Leonard found the killer? Who's manipulating whom? 
+      </synopsis>
+    </movie>
+  </movies>
+
+  <cinemas>
+    <cinema id="MM">
+      <name>MovieMania</name>
+      <phone>555-123-4567</phone>
+      <address>1234 Main St, &PV;</address>
+      <directions>From the town hall go west about a half mile</directions>
+      <facilities>
+        <candy-bar/>
+        <disabled-access/>
+      </facilities>
+      <pricing>
+        <prices id="MMSTD">
+          <name>Standard</name>
+          <period>After 6pm</period>
+          <adult>6.50</adult>
+          <child>4.00</child>
+          <discount>4.00</discount>
+        </prices>
+        <prices id="MMMAT">
+          <name>Matinee</name>
+          <period>Before 6pm</period>
+          <adult>4.00</adult>
+          <child>3.00</child>
+          <discount>3.00</discount>
+        </prices>
+      </pricing>
+    </cinema>
+    <cinema id="CF">
+      <name>Cheap Flicks</name>
+      <phone>555-345-6789</phone>
+      <address>4321 Back Street, &PV;</address>
+      <directions>Behind the SuperMart department store on Main St</directions>
+      <facilities>
+        <disabled-access/>
+      </facilities>
+      <pricing>
+        <prices id="CFSTD">
+          <name>Standard</name>
+          <period>All sessions</period>
+          <adult>1.50</adult>
+          <child>1.50</child>
+        </prices>
+      </pricing>
+    </cinema>
+    <cinema id="OC">
+      <name>Oscar's Cinema</name>
+      <phone>555-987-6543</phone>
+      <address>1 Hollywood Blvd, &PV;</address>
+      <facilities>
+        <candy-bar/>
+        <disabled-access/>
+      </facilities>
+      <pricing>
+        <prices id="OCSTD">
+          <name>Standard</name>
+          <period>Before 4pm or after 6pm</period>
+          <adult>6.50</adult>
+          <child>3.50</child>
+          <discount>4.00</discount>
+        </prices>
+        <prices id="OCTWI">
+          <name>Twilight</name>
+          <period>From 4pm to 6pm</period>
+          <adult>4.50</adult>
+          <child>3.00</child>
+          <discount>3.00</discount>
+        </prices>
+      </pricing>
+    </cinema>
+  </cinemas>
+
+  <screenings>
+    <screening movie-id="LR1" cinema-id="MM">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <features>
+        <digital-sound>Y</digital-sound>
+      </features>
+      <restrictions>
+        <no-passes/>
+      </restrictions>
+      <sessions>
+        <session price-id="MMMAT">11:45am</session>
+        <session price-id="MMMAT">2:25pm</session>
+        <session price-id="MMSTD">7:00pm</session>
+        <session price-id="MMSTD">9:40pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="LR1" cinema-id="OC">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <features>
+        <digital-sound>Y</digital-sound>
+      </features>
+      <sessions>
+        <session price-id="OCSTD">2:30pm</session>
+        <session price-id="OCTWI">4:30pm</session>
+        <session price-id="OCSTD">7:00pm</session>
+        <session price-id="OCSTD">9:30pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="SW2" cinema-id="MM">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <features>
+        <digital-sound>THX</digital-sound>
+      </features>
+      <restrictions>
+        <no-passes/>
+      </restrictions>
+      <sessions>
+        <session price-id="MMMAT">10:00am</session>
+        <session price-id="MMMAT">12:30pm</session>
+        <session price-id="MMMAT">3:00pm</session>
+        <session price-id="MMSTD">6:30pm</session>
+        <session price-id="MMSTD">9:00pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="SW2" cinema-id="OC">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <features>
+        <digital-sound>THX</digital-sound>
+      </features>
+      <restrictions>
+        <no-passes/>
+      </restrictions>
+      <sessions>
+        <session price-id="OCSTD">11:30am</session>
+        <session price-id="OCSTD">2:00pm</session>
+        <session price-id="OCTWI">4:30pm</session>
+        <session price-id="OCSTD">7:00pm</session>
+        <session price-id="OCSTD">9:30pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="MEM" cinema-id="CF">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <sessions>
+        <session price-id="CFSTD">7:00pm</session>
+        <session price-id="CFSTD">9:30pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="JN" cinema-id="MM">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <sessions>
+        <session price-id="MMMAT">3:30pm</session>
+        <session price-id="MMSTD">7:20pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="JN" cinema-id="OC">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <sessions>
+        <session price-id="OCTWI">4:20pm</session>
+        <session price-id="OCSTD">6:50pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="MIN" cinema-id="CF">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <sessions>
+        <session price-id="CFSTD">8:00pm</session>
+      </sessions>
+    </screening>
+    <screening movie-id="ABM" cinema-id="CF">
+      <start-date>08/23/2002</start-date>
+      <end-date>08/29/2002</end-date>
+      <sessions>
+        <session price-id="CFSTD">5:00pm</session>
+      </sessions>
+    </screening>
+  </screenings>
+</movie-watcher>

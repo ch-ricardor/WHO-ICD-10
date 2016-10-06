@@ -11,7 +11,7 @@ or the ftp site:
 
 ftp://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2017/
 
-To apply the xsl to the xml you can use any xml processor available in the market.
+To apply the xsl to the xml you can use any xml processor available in the market, or compile the Delphi program "StyleView" to create an application which allow you to do the task.
 
 ### Reference
 World Health Organization ICD - 10 http://www.who.int/classifications/icd/en/

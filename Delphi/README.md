@@ -1,5 +1,10 @@
-Delphi Developer's Guide to XML
-Chapter 20 - Applying XSL Transformations
+## Delphi Developer's Guide to XML
+### Chapter 20 - Applying XSL Transformations
+
+Obtained from:
+
+http://keith-wood.name/delphixml/BookCode/Chapter%2020/index.html
+
 
 Previous   Next   Listings
 Use XSLT to convert your XML documents into other formats, including HTML, plain text, and XML, before sending them out to the user.
